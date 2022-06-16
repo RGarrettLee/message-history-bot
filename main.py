@@ -23,7 +23,7 @@ async def on_ready():
 
 bot.remove_command('help')
 
-@bot.command
+@bot.command()
 async def help(ctx):
     """See all commands"""
     embed = discord.Embed(title='Help', description='Guide to this bot', color=0x00ff00)

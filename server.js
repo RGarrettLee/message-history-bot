@@ -15,6 +15,10 @@ app.get('/login', (req, res) => {
     res.sendFile(path.join(__dirname, '/public/index.html'));
 });
 
+app.get('/history/:user_id', (req, res) => {
+    // get user message history page here, use helper function to generate the page
+});
+
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '/public/pages/404.html'));
 });
