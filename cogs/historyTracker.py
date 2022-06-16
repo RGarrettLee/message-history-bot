@@ -11,8 +11,6 @@ class Tracker(commands.Cog):
 
     def saveData(self): # gonna have to change this to send to the server and then append it there, this works FOR NOW. Refer to mini project feedback section
         requests.post(f'{self.backend}/api/history', json=self.messageHistory, headers={ 'Content-Type': 'application/json' })
-        with open('db/messages.json', 'w', encoding='utf-8') as f:
-            json.dump(self.messageHistory, f, ensure_ascii=True, indent=4)
 
     def __init__(self, bot):
         self.bot = bot
