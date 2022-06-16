@@ -1,0 +1,1 @@
+// deal with discord OAuth login and redirect to /history/:userid
