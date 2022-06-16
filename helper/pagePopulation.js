@@ -7,14 +7,22 @@ function generateTable(user_id) {
 
     let table = '';
 
-    for (let i = 0; i < messageHistory[`${user_id}`]['messages'].length; i++) {
-        table += `<tr>
+    if (messageHistory[`${user_id}`]) {
+        for (let i = 0; i < messageHistory[`${user_id}`]['messages'].length; i++) {
+            table += `<tr>
     <td>${messageHistory[`${user_id}`]['dates'][i]}</td>
     <td>${messageHistory[`${user_id}`]['messages'][i]}</td>
 </tr>
-
-        `;
+    
+            `;
+        }
+    } else {
+        table += `<tr>
+        <td>No</td>
+        <td>History</td>
+    </tr>`
     }
+
     return table;
 }
 
@@ -37,7 +45,7 @@ function generatePage(username, user_id, avatar) { // generate page data here
             <img style="position: relative; left: 45%; padding-top: 35px;" alt="pfp" src="https://cdn.discordapp.com/avatars/${user_id}/${avatar}.png" />
     
             <section>
-                <table style="position: relative; left: 10%;">
+                <table>
                     <thead>
                         <tr>
                             <th>Date</th>
