@@ -8,7 +8,7 @@ function generateTable(user_id) {
     let table = '';
 
     if (messageHistory[`${user_id}`]) {
-        for (let i = messageHistory[`${user_id}`]['messages'] - 1; i >= 0; i--) {
+        for (let i = messageHistory[`${user_id}`]['messages'].length - 1; i >= 0; i--) {
             table += `<tr>
     <td>${messageHistory[`${user_id}`]['dates'][i]}</td>
     <td>${messageHistory[`${user_id}`]['messages'][i]}</td>
