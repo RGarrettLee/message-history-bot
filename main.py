@@ -7,7 +7,7 @@ with open('db/serverData.json', 'r') as f:
     serverData = json.loads(f.read())
 
 token = serverData['bot']['token']
-prefix = serverData['token']
+prefix = serverData['prefix']
 
 intents = discord.Intents()
 intents.members = True
