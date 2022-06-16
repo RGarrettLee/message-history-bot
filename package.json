@@ -1,0 +1,23 @@
+{
+  "name": "message-history-bot",
+  "version": "1.0.0",
+  "description": "a bot that stores users message history and displays it to them on a separate server",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RGarrettLee/message-history-bot.git"
+  },
+  "author": "Garrett Lee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RGarrettLee/message-history-bot/issues"
+  },
+  "homepage": "https://github.com/RGarrettLee/message-history-bot#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
