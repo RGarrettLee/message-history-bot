@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const routes = require('./routes/index.js');
+const html = require('./helper/pagePopulation');
 
 const app = express();
 
@@ -15,8 +16,18 @@ app.get('/login', (req, res) => {
     res.sendFile(path.join(__dirname, '/public/index.html'));
 });
 
-app.get('/history/:user_id', (req, res) => {
+app.get('/success', (req, res) => {
+    res.sendFile(path.join(__dirname, '/public/pages/redirect.html'));
+})
+
+app.get('/history/:username/:user_id/:avatar', (req, res) => {
     // get user message history page here, use helper function to generate the page
+    if (req.params.user_id) {
+        res.send(`<h1>${req.params.username}</h1><br><img alt="pfp" src="https://cdn.discordapp.com/avatars/${req.params.user_id}/${req.params.avatar}.png" />`);
+        html.generateHTML
+    } else {
+        res.sendFile()
+    }
 });
 
 app.get('*', (req, res) => {

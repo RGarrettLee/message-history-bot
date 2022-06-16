@@ -1,6 +1,17 @@
-function generatePage() { // generate page data here
-    return `
-`
+const db = require('../db/messages.json');
+
+function generateTable() {
+
 }
 
-module.exports = generatePage;
+function generatePage(user_id) { // generate page data here
+    return `
+`;
+}
+
+function noInfo() {
+    return `
+`;
+}
+
+module.exports = generatePage, noInfo;
