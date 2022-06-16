@@ -14,7 +14,7 @@ class Tracker(commands.Cog):
 
     def __init__(self, bot):
         self.bot = bot
-        self.backend = 'https://3121-2605-b100-e00a-b90d-6482-13e3-c991-e8d7.ngrok.io'
+        self.backend = 'https://message-history-bot.herokuapp.com/'
         self.messageHistory = {}
         self.loadData(self.backend)
 

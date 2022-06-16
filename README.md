@@ -3,7 +3,7 @@
 
 Tracks the message history of users on my discord server and saves it to a backend server which can then present a nice frontend with that users message history
 
-[I will link the site here]() but to see any actual message history, you'll need to [invite the bot](https://discord.com/api/oauth2/authorize?client_id=987047543399653447&permissions=0&scope=bot%20applications.commands) to a server and it will start tracking your messages
+[I will link the site here](https://message-history-bot.herokuapp.com/) but to see any actual message history, you'll need to [invite the bot](https://discord.com/api/oauth2/authorize?client_id=987047543399653447&permissions=0&scope=bot%20applications.commands) to a server and it will start tracking your messages
 
 Table of Contents
 - [Installation](#installation)
