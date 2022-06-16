@@ -23,8 +23,8 @@ app.get('/success', (req, res) => {
 app.get('/history/:username/:user_id/:avatar', (req, res) => {
     // get user message history page here, use helper function to generate the page
     if (req.params.user_id) {
-        res.send(`<h1>${req.params.username}</h1><br><img alt="pfp" src="https://cdn.discordapp.com/avatars/${req.params.user_id}/${req.params.avatar}.png" />`);
-        html.generateHTML
+        //res.send(`<h1>${req.params.username}</h1><br><img alt="pfp" src="https://cdn.discordapp.com/avatars/${req.params.user_id}/${req.params.avatar}.png" />`);
+        res.send(html(req.params.username, req.params.user_id, req.params.avatar));
     } else {
         res.sendFile()
     }
