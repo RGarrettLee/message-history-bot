@@ -35,5 +35,5 @@ app.get('*', (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.info(`Server is live at http://localhost:${PORT}`);
+    console.info(`Server is live`);
 });
