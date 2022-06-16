@@ -6,7 +6,7 @@ const params = Object.fromEntries(urlParams.entries());
 const discordAPI = 'https://discord.com/api';
 const clientID = '987047543399653447';
 const clientSecret = 'E24RZ6Fy6vXhhqHf-9X8lhKq1SkPvPA2';
-const backend = 'https://message-history-bot.herokuapp.com/';
+const backend = 'https://message-history-bot.herokuapp.com';
 const redirect_uri = `${backend}/success`
 
 let token = '';
