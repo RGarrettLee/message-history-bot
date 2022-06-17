@@ -16,6 +16,7 @@ Table of Contents
 npm i
 pip install -r requirements.txt
 ```
+> though you aren't really supposed to clone this but you can to learn how it works I guess
 
 ## Usage
 
@@ -24,7 +25,8 @@ pip install -r requirements.txt
 ## Tech Stack
 - Python (for the discord bot)
 - Express (for the backend framework)
-- NodeJS
+- [Heroku](https://dashboard.heroku.com/apps) (for hosting)
+- [NodeJS](https://nodejs.org/en/)
 - [SimpleCSS](https://simplecss.org/) (for the styling)
 
 ## Credits
