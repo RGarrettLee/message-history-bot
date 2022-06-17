@@ -14,9 +14,27 @@ class Tracker(commands.Cog):
 
     def __init__(self, bot):
         self.bot = bot
-        self.backend = 'https://message-history-bot.herokuapp.com/'
+        self.backend = 'https://message-history-bot.herokuapp.com'
         self.messageHistory = {}
         self.loadData(self.backend)
+
+    @commands.command()
+    async def history(self, ctx):
+        """See the your message history"""
+        avatarLink = str(ctx.author.avatar)
+        #https://cdn.discordapp.com/avatars/174263950685372417/2dcdfeeb59be0df62108498a6307f1cd.png?size=1024
+        avatarLink = avatarLink.replace('https://cdn.discordapp.com/avatars/', '')
+        
+        avatarCode = ''
+        switch = False
+        for i in avatarLink:
+            if (i == '.'):
+                break
+            if (switch):
+                avatarCode += i
+            if (i == '/'):
+                switch = True
+        await ctx.send(f'https://message-history-bot.herokuapp.com/history/{ctx.author.name}/{ctx.author.id}/{avatarCode}')
 
     @commands.Cog.listener()
     async def on_message(self, message):
