@@ -21,6 +21,8 @@ async def on_ready():
     print(bot.user.name, 'logged in')
     print('-----------')
 
+    await bot.change_presence(activity=discord.Game(name='with all the messages'))
+
 bot.remove_command('help')
 
 @bot.command()
