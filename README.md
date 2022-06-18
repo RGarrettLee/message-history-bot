@@ -10,6 +10,7 @@ Table of Contents
 - [Usage](#usage)
 - [Tech Stack](#tech-stack)
 - [Credits](#credits)
+- [Demo](#demo)
 
 ## Installation
 ```
